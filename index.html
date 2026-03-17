@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiplication Fluency</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Multiplication Fluency</h1>
 
+    <!-- Student Setup -->
+    <section id="setupScreen" class="card">
+      <h2>Student Login</h2>
+
+      <label>Name</label>
+      <input id="studentName" type="text" placeholder="Type your name" />
+
+      <label>Homeroom</label>
+      <select id="homeroom">
+        <option value="">Choose homeroom</option>
+        <option>Gulls</option>
+        <option>Crusaders</option>
+        <option>Owls</option>
+        <option>Bears</option>
+        <option>Greyhounds</option>
+        <option>Yellowjackets</option>
+      </select>
+
+      <label>Grade</label>
+      <select id="gradeLevel">
+        <option value="">Choose grade</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+
+      <button id="startBtn">Start</button>
+      <button id="teacherBtn" class="secondary">Teacher Dashboard</button>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quizScreen" class="card hidden">
+      <div class="quizHeader">
+        <div><strong>Time:</strong> <span id="timer">3:00</span></div>
+        <div><strong>Answered:</strong> <span id="answeredCount">0</span>/50</div>
+      </div>
+      <div id="problemGrid" class="problemGrid"></div>
+      <button id="submitBtn">Submit</button>
+    </section>
+
+    <!-- Results -->
+    <section id="resultScreen" class="card hidden">
+      <h2>Results</h2>
+      <p id="scoreText"></p>
+      <p id="timeRemainingText"></p>
+
+      <h3>Problems Missed</h3>
+      <div id="missedList"></div>
+
+      <h3>Your Score History</h3>
+      <div id="historyList"></div>
+
+      <h3>Your Fact Mastery</h3>
+      <div id="studentFactGrid"></div>
+
+      <button id="playAgainBtn">Play Again</button>
+    </section>
+
+    <!-- Teacher Login -->
+    <section id="teacherLoginScreen" class="card hidden">
+      <h2>Teacher Login</h2>
+      <label>Password</label>
+      <input id="teacherPassword" type="password" />
+      <button id="teacherLoginBtn">Enter</button>
+      <button id="backToStudentBtn" class="secondary">Back</button>
+    </section>
+
+    <!-- Teacher Dashboard -->
+    <section id="teacherScreen" class="card hidden">
+      <h2>Teacher Dashboard</h2>
+
+      <div class="filters">
+        <select id="teacherGradeFilter">
+          <option value="">All Grades</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+
+        <select id="teacherHomeroomFilter">
+          <option value="">All Homerooms</option>
+          <option>Gulls</option>
+          <option>Crusaders</option>
+          <option>Owls</option>
+          <option>Bears</option>
+          <option>Greyhounds</option>
+          <option>Yellowjackets</option>
+        </select>
+
+        <button id="refreshTeacherBtn">Refresh</button>
+      </div>
+
+      <h3>Student Scores</h3>
+      <div id="teacherStudentList"></div>
+
+      <h3>Class Fact Accuracy</h3>
+      <div id="teacherFactGrid"></div>
+
+      <button id="teacherLogoutBtn">Log Out</button>
+    </section>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
