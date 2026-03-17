@@ -1,1 +1,103 @@
 
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+input, select, button {
+  display: block;
+  width: 100%;
+  margin: 10px 0 16px;
+  padding: 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #6b7280;
+}
+
+.quizHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.problemGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.problemCard {
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fafafa;
+}
+
+.problemCard label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.problemCard input {
+  margin: 0;
+}
+
+.historyItem, .studentRow {
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.factGrid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.factCell {
+  padding: 8px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 12px;
+}
